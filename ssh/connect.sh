@@ -1,0 +1,1 @@
+sudo ssh -i "./ssh/apache1.pem" ubuntu@ec2-54-209-103-111.compute-1.amazonaws.com
