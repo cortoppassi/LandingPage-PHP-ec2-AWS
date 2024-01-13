@@ -31,7 +31,7 @@ $mail = new PHPMailer(true);
     try {
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.live.com';                     //Set the SMTP server to send through
+        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
         $mail->Username   = 'jonathan-516@hotmail.com';                     //SMTP username
         $mail->Password   = '!JavaScript2022!';                               //SMTP password dpzp quvi luea mwkn
