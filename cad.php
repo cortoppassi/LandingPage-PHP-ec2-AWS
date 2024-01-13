@@ -1,15 +1,4 @@
 <?php 
-    // $nome = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-    // $para = "jonathan-516@hotmail.com";
-    // $assunto = "Contato via site!";
-    // $mensagem = "<strong>Nome: Contato via site </strong>" . $nome;
-    // $headers = "From: dominio.com.br<sistema@dominio.com.br>\n" .
-    //         'Reply-To: exemplo@exemplo.com' . "\r\n" .
-    //         "Content-Type: text/html; charset=UTF-8\r\n";
-
-    // mail($para, $assunto, $mensagem, $headers);
-    // print "Enviado!";
-
     include_once("conexao.php");
 
     $nome = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -26,6 +15,7 @@
      header("Location: {$_SERVER['HTTP_REFERER']}");
      exit;
 ?>
+
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -43,8 +33,8 @@ $mail = new PHPMailer(true);
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.live.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'john.ltda@hotmail.com';                     //SMTP username
-        $mail->Password   = 'necfc160';                               //SMTP password dpzp quvi luea mwkn
+        $mail->Username   = 'jonathan-516@hotmail.com';                     //SMTP username
+        $mail->Password   = '!JavaScript2022!';                               //SMTP password dpzp quvi luea mwkn
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;            //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
@@ -52,12 +42,12 @@ $mail = new PHPMailer(true);
         $mail->Timeout = 60;
         // Um servidor SMTP (Simple Mail Transfer Protocol) é um servidor de correio eletrônico responsável por enviar e rotear e-mails na Internet.
         
-        $mail->setFrom('john.ltda@hotmail.com', 'Mailer');
+        $mail->setFrom('jonathan-516@hotmail.com', 'Mailer');
         $nome = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $mail->addAddress('jonathan-516@hotmail.com', '$nome');     //Add a recipient
 
-        $mail->addReplyTo('john.ltda@hotmail.com', 'Information');
+        $mail->addReplyTo('jonathan-516@hotmail.com', 'Information');
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
@@ -68,5 +58,5 @@ $mail = new PHPMailer(true);
         $mail->send();
         echo 'E-mail enviado com sucesso!';
     } catch (Exception $e) {
-        echo "Erro ao enviar o e-mail: {$e}";
+        echo "Erro ao enviar o e-mail: {$e->getMessage()}";
 }
