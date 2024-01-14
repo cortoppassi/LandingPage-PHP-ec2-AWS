@@ -33,18 +33,18 @@ $mail = new PHPMailer(true);
     try {
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+        $mail->Host       = 'smtp.live.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
         $mail->Username   = 'jonathan-516@hotmail.com';                     //SMTP username
         $mail->Password   = '!JavaScript2022!';                               //SMTP password dpzp quvi luea mwkn
         $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;            //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        $mail->Port = 465;            //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         // Ajuste no tempo limite
         $mail->Timeout = 60;
         // Um servidor SMTP (Simple Mail Transfer Protocol) é um servidor de correio eletrônico responsável por enviar e rotear e-mails na Internet.
         
-        $mail->setFrom('jonathan-516@hotmail.com', 'Mailer');
+        $mail->setFrom('jonathan-516@hotmail.com', 'Jonathan');
         $nome = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $mail->addAddress('jonathan-516@hotmail.com', '$nome');     //Add a recipient
