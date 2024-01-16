@@ -46,15 +46,13 @@
     $mail->setFrom('john.chmod777@gmail.com', 'Jonathan');
     $nome = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-    $mail->addAddress('jonathan-516@hotmail.com', '$nome');     //Destinatário
-
-    $mail->addReplyTo('john.chmod777@gmail.com', 'Information');
+    $mail->addAddress("$email", "$nome");     //Destinatário
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'IMERSÃO PHP SEM MISTÉRIOS';
     $mail->Body    = 'This is the HTML message body <b>Uma jornada intensiva e imersiva no universo da programação web. Durante esse período concentrado, os participantes têm a oportunidade de aprimorar suas habilidades no desenvolvimento de aplicações dinâmicas usando PHP, uma linguagem versátil e amplamente utilizada.</b>';
-    // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+  
 
     if (!$mail -> send()){
         die ("Erro no envio do e-mail: {$mail -> ErrorInfo}");
