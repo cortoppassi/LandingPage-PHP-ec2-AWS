@@ -18,7 +18,10 @@
             padding: 0;
             font-family: 'Arial', sans-serif;
         }
-        
+        h1 {
+            font-family: 'Bungee Spice', sans-serif;
+            font-size: 40px;
+        }
         header {
             height: 50vh;
             background-color: #1D3557;
@@ -28,6 +31,46 @@
             align-items: center;
             justify-content: center;
             padding: 50px;
+        }
+        @media screen and (max-width: 1000px){
+            header {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+            }
+            h1 {
+                width: max-content;
+               
+            }
+
+            #img5onda {
+                width: 50vh;
+            }
+
+            #descubra-php div {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #imgPHP {
+                width: 10%;
+                align-items: center;
+                justify-content: center;
+                
+            }
+
+            #o-que-aprendera div {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+            }
+            
         }
 
         #titulo1 {
@@ -65,14 +108,20 @@
             cursor: pointer;
             font-size: 16px;
         }
-            #descubra-php {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #e0e0e0;
+
+        #descubra-php {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #e0e0e0;
         }
+
+        #imgPHP {
+            width: 70%;
+        }
+
         #descubra-php h2 {
             font-family: 'Bungee', sans-serif;
             font-size: 40px;
@@ -217,7 +266,7 @@
     <header>
         <div id="titulo1">
             <div>
-            <h1 style="font-family: 'Bungee Spice', sans-serif; font-size: 40px;">IMERSÃO PHP SEM MISTÉRIOS</h1>
+            <h1>IMERSÃO PHP SEM MISTÉRIOS</h1>
                 <h3>Uma jornada intensiva e imersiva no universo da programação web. Durante esse período concentrado, os participantes têm a oportunidade de aprimorar suas habilidades no desenvolvimento de aplicações dinâmicas usando PHP, uma linguagem versátil e amplamente utilizada.</h3>
             </div>
             <p>Deixe seu e-mail para receber mais informações.</p>
@@ -232,14 +281,14 @@
             </div>
         </div>
         <div>
-            <img src="https://www.5onda.com.br/images/logo.png" alt="5Onda">
+            <img id="img5onda" src="https://www.5onda.com.br/images/logo.png" alt="5Onda">
         </div>
     </header>
 
     <section id="descubra-php">
         <div><h2>Descubra o Poder do PHP</h2></div>
         <div id="descubra-php01">
-            <div><img src="https://repository-images.githubusercontent.com/431991980/6f97d8ac-6eb3-453a-96d4-372434e07ddb" alt="" style="width: 70%;"></div>
+            <div><img id="imgPHP" src="https://repository-images.githubusercontent.com/431991980/6f97d8ac-6eb3-453a-96d4-372434e07ddb" alt=""></div>
             <div style="background: linear-gradient(to right, #c9cdea, #505e9b);"><h3>O PHP é uma linguagem de programação versátil focada principalmente em scripts do lado do servidor. Oferece flexibilidade, sendo utilizado em três principais áreas: scripts do lado do servidor, scripts de linha de comando e até mesmo para escrever aplicações desktop com o PHP-GTK. O PHP é compatível com diversos sistemas operacionais e servidores web, proporcionando liberdade de escolha. Além de gerar HTML, o PHP pode manipular diversos tipos de arquivos, interagir com bancos de dados, comunicar-se com outros serviços e oferece recursos para processamento de texto, como expressões regulares. Seus recursos são vastos e abrangem uma ampla variedade de aplicações, tornando-o uma escolha poderosa para desenvolvimento web.</h3></div>
         </div>
     </section>
